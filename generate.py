@@ -97,8 +97,7 @@ class CrosswordCreator():
     def enforce_node_consistency(self):
         """
         Update `self.domains` such that each variable is node-consistent.
-        (Remove any values that are inconsistent with a variable's unary
-         constraints; in this case, the length of the word.)
+        Remove any values that are inconsistent with a variable's unary constraints; in this case, the length of the word.
         """
 
         # init domain variable to a copy of self.domains
@@ -118,11 +117,9 @@ class CrosswordCreator():
     def revise(self, x, y):
         """
         Make variable `x` arc consistent with variable `y`.
-        To do so, remove values from `self.domains[x]` for which there is no
-        possible corresponding value for `y` in `self.domains[y]`.
 
-        Return True if a revision was made to the domain of `x`; return
-        False if no revision was made.
+        Return True if a revision was made to the domain of `x`; 
+        Return False if no revision was made.
         """
 
         # init revised_flag as False
@@ -171,8 +168,6 @@ class CrosswordCreator():
     def ac3(self, arcs=None):
         """
         Update `self.domains` such that each variable is arc consistent.
-        If `arcs` is None, begin with initial list of all arcs in the problem.
-        Otherwise, use `arcs` as the initial list of arcs to make consistent.
 
         Return True if arc consistency is enforced and no domains are empty;
         return False if one or more domains end up empty.
@@ -229,8 +224,8 @@ class CrosswordCreator():
 
     def assignment_complete(self, assignment):
         """
-        Return True if `assignment` is complete (i.e., assigns a value to each
-        crossword variable); return False otherwise.
+        Return True if `assignment` is complete
+        Return False otherwise.
         """
 
         # Check for assignments
@@ -244,8 +239,8 @@ class CrosswordCreator():
 
     def consistent(self, assignment):
         """
-        Return True if `assignment` is consistent (i.e., words fit in crossword
-        puzzle without conflicting characters); return False otherwise.
+        Return True if `assignment` is consistent
+        Return False otherwise.
         """
 
         # check if all values are distinct
@@ -276,8 +271,6 @@ class CrosswordCreator():
         """
         Return a list of values in the domain of `var`, in order by
         the number of values they rule out for neighboring variables.
-        The first value in the list, for example, should be the one
-        that rules out the fewest values among the neighbors of `var`.
         """
 
         # init domain
@@ -336,8 +329,6 @@ class CrosswordCreator():
         """
         Using Backtracking Search, take as input a partial assignment for the
         crossword and return a complete assignment if possible to do so.
-
-        `assignment` is a mapping from variables (keys) to words (values).
 
         If no assignment is possible, return None.
         """
