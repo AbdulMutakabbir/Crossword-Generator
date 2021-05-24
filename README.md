@@ -6,10 +6,11 @@ How might you go about generating a crossword puzzle? Given the structure of a c
 
 # Usage 
 ```
-* Clone the Git Reposoratory
-* cd into "Crossword-Generator" directory
-* pip install requirements.py
-* python generate.py <path-to-crossword-structure> <path-to-word-list> <output-file-name>
+> Clone the Git Reposoratory
+> cd into "Crossword-Generator" directory
+> Add word list and crossword structure as needed or use the smaples already preasent.
+> pip install requirements.py
+> python generate.py <path-to-crossword-structure> <path-to-word-list> <output-file-name>
 ```
 
 # Output 
